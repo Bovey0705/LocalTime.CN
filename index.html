@@ -52,6 +52,7 @@
         <option value="1">尼日利亚拉各斯 (WAT, UTC+1)</option>
         <option value="-3">巴西里约热内卢 (BRT, UTC-3)</option>
         <option value="-3">阿根廷布宜诺斯艾利斯 (ART, UTC-3)</option>
+        <option value="1">科特迪瓦阿比让 (GMT, UTC+1)</option>
     </select>
     <br><br>
     <button onclick="calculateTimeDifference()">当地时间</button>
@@ -61,10 +62,10 @@
 <script>
     function calculateTimeDifference() {
         var timezoneOffset = parseFloat(document.getElementById("timezone").value);
-        if (timezoneOffset === 0) {
-            alert("请选择一个地区");
-            return;
-        }
+        // if (timezoneOffset === 0) {
+        //     alert("请选择一个地区");
+        //     return;
+        // }
 
         var currentTime = new Date();
         var utc = currentTime.getTime() + (currentTime.getTimezoneOffset() * 60000);
